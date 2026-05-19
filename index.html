@@ -1,10 +1,125 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: #f5f5f7;
+        }
+        header {
+            background: #1d4ed8;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 0.95rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: #fff;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        .hero p {
+            max-width: 640px;
+            margin: 16px auto 32px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #fff;
+            color: #1d4ed8;
+            padding: 14px 28px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .feature-card h3 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
-    <h3>
-        Hello
-        OK FPT
-    </h3>
+    <header>
+        <div class="logo">LandingCo</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Build your next idea faster</h1>
+        <p>Launch a modern landing page with a clean design, strong messaging, and a clear call to action. Great for startups, products, and small businesses.</p>
+        <a class="btn-primary" href="#contact">Get Started</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <h3>Fast Setup</h3>
+            <p>Get a professional page ready in minutes with minimal effort and a polished layout.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Responsive Design</h3>
+            <p>Looks great on desktop, tablet, and mobile devices without extra configuration.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Clear Messaging</h3>
+            <p>Communicate your value clearly with a strong headline and focused content.</p>
+        </div>
+    </section>
+
+    <section id="about" style="max-width: 900px; margin: 0 auto 40px; padding: 0 20px;">
+        <h2 style="text-align: center;">Why choose this landing page?</h2>
+        <p style="text-align: center; color: #555; line-height: 1.8;">
+            A simple landing page helps visitors understand your offer quickly, increases conversions, and keeps the experience smooth across all devices. Use this as a base and customize it for your brand.
+        </p>
+    </section>
+
+    <footer id="contact">
+        <p>Ready to launch? Contact us at <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p>&copy; 2026 LandingCo. All rights reserved.</p>
+    </footer>
 </body>
+</html>
