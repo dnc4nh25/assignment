@@ -3,81 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Landing Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-            background: #f5f5f7;
-        }
-        header {
-            background: #1d4ed8;
-            color: #fff;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header .logo {
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 18px;
-            font-size: 0.95rem;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            color: #fff;
-        }
-        .hero h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-        .hero p {
-            max-width: 640px;
-            margin: 16px auto 32px;
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-        .btn-primary {
-            display: inline-block;
-            background: #fff;
-            color: #1d4ed8;
-            padding: 14px 28px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .feature-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        .feature-card h3 {
-            margin-top: 0;
-        }
-        footer {
-            text-align: center;
-            padding: 24px 20px;
-            color: #666;
-            font-size: 0.95rem;
-        }
-    </style>
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -89,37 +16,118 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Build your next idea faster</h1>
-        <p>Launch a modern landing page with a clean design, strong messaging, and a clear call to action. Great for startups, products, and small businesses.</p>
-        <a class="btn-primary" href="#contact">Get Started</a>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">Launch faster</span>
+                <h1>Thiết kế landing page chuyên nghiệp cho sản phẩm của bạn</h1>
+                <p>Giúp bạn tạo trải nghiệm người dùng rõ ràng, thu hút khách hàng và tăng chuyển đổi ngay từ lần đầu tiếp cận.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#contact">Bắt đầu ngay</a>
+                    <button id="actionButton" class="btn btn-secondary">Xem thời gian</button>
+                </div>
+                <div id="output"></div>
+            </div>
+            <div class="hero-visual">
+                <div class="stats-card">
+                    <p>Khách hàng hài lòng</p>
+                    <strong>+1,250</strong>
+                </div>
+            </div>
+        </section>
 
-    <section id="features" class="features">
-        <div class="feature-card">
-            <h3>Fast Setup</h3>
-            <p>Get a professional page ready in minutes with minimal effort and a polished layout.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Responsive Design</h3>
-            <p>Looks great on desktop, tablet, and mobile devices without extra configuration.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Clear Messaging</h3>
-            <p>Communicate your value clearly with a strong headline and focused content.</p>
-        </div>
-    </section>
+        <section id="features" class="section">
+            <h2 class="section-heading">Những điểm nổi bật</h2>
+            <div class="grid feature-grid">
+                <article class="feature-card">
+                    <h3>Giao diện hiện đại</h3>
+                    <p>Thiết kế tinh gọn, dễ đọc và tối ưu cho mọi kích thước màn hình.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Trải nghiệm mượt mà</h3>
+                    <p>Thanh điều hướng rõ ràng, nội dung tiêu đề mạnh mẽ và hành động kêu gọi rõ ràng.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Tùy chỉnh linh hoạt</h3>
+                    <p>Dễ dàng thêm nội dung, hình ảnh và thay đổi phong cách theo thương hiệu của bạn.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Chuẩn SEO</h3>
+                    <p>Trang HTML sạch giúp công cụ tìm kiếm hiểu nội dung tốt hơn và hiển thị hiệu quả hơn.</p>
+                </article>
+            </div>
+        </section>
 
-    <section id="about" style="max-width: 900px; margin: 0 auto 40px; padding: 0 20px;">
-        <h2 style="text-align: center;">Why choose this landing page?</h2>
-        <p style="text-align: center; color: #555; line-height: 1.8;">
-            A simple landing page helps visitors understand your offer quickly, increases conversions, and keeps the experience smooth across all devices. Use this as a base and customize it for your brand.
-        </p>
-    </section>
+        <section id="testimonials" class="section testimonials-section">
+            <h2 class="section-heading">Khách hàng nói gì</h2>
+            <div class="grid testimonial-grid">
+                <article class="testimonial-card">
+                    <p>"LandingCo giúp chúng tôi hoàn thành trang giới thiệu sản phẩm trong một buổi sáng. Thiết kế thật sự ấn tượng."</p>
+                    <strong>— Minh Anh, CEO</strong>
+                </article>
+                <article class="testimonial-card">
+                    <p>"Giao diện rõ ràng, dễ chỉnh sửa và tải nhanh trên mobile. Khách hàng phản hồi tốt ngay lập tức."</p>
+                    <strong>— Thanh Huy, Manager</strong>
+                </article>
+            </div>
+        </section>
 
-    <footer id="contact">
-        <p>Ready to launch? Contact us at <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <section id="pricing" class="section">
+            <h2 class="section-heading">Gói dịch vụ</h2>
+            <div class="grid pricing-grid">
+                <article class="pricing-card">
+                    <h3>Starter</h3>
+                    <p>Phù hợp với dự án nhỏ và cá nhân.</p>
+                    <strong>Miễn phí</strong>
+                    <ul>
+                        <li>1 trang landing</li>
+                        <li>Hỗ trợ cơ bản</li>
+                        <li>Thiết kế responsive</li>
+                    </ul>
+                </article>
+                <article class="pricing-card">
+                    <h3>Business</h3>
+                    <p>Cho doanh nghiệp muốn mở rộng thương hiệu.</p>
+                    <strong>499,000₫</strong>
+                    <ul>
+                        <li>3 trang nội dung</li>
+                        <li>Tối ưu SEO cơ bản</li>
+                        <li>Hỗ trợ 1 tháng</li>
+                    </ul>
+                </article>
+                <article class="pricing-card featured-card">
+                    <h3>Premium</h3>
+                    <p>Toàn diện cho chiến dịch marketing chuyên nghiệp.</p>
+                    <strong>899,000₫</strong>
+                    <ul>
+                        <li>5 trang nội dung</li>
+                        <li>Thiết kế tùy chỉnh</li>
+                        <li>Hỗ trợ 3 tháng</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <h2 class="section-heading">Liên hệ</h2>
+            <p>Hãy gửi email hoặc gọi để bắt đầu xây dựng landing page của bạn ngay hôm nay.</p>
+            <div class="contact-details">
+                <div>
+                    <strong>Email</strong>
+                    <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+                </div>
+                <div>
+                    <strong>Phone</strong>
+                    <p>+84 123 456 789</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <p>&copy; 2026 LandingCo. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
